@@ -6,7 +6,7 @@ const requestHandler = (req, res) => {
   if (url === "/") {
     res.setHeader("Content-Type", "text/html");
     res.write("<html>");
-    res.write("<head><title>Node App</title></head>");
+    res.write("<head><title>Node App1</title></head>");
     res.write("<p>Enter Message: </p>");
     res.write(
       '<body><form method="POST" action="/message"><input type="text" name="message"><button type="submit">Send</button></form></body>'
@@ -20,7 +20,6 @@ const requestHandler = (req, res) => {
       console.log(chunk);
       body.push(chunk);
     });
-
     return req.on("end", () => {
       const parsedBody = Buffer.concat(body).toString();
       res.statusCode = 302;
@@ -32,6 +31,7 @@ const requestHandler = (req, res) => {
       });
     });
   }
+  
   res.setHeader("Content-Type", "text/html");
   res.write("<html>");
   res.write("<head><title>My First Page</title></head>");
