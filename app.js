@@ -14,6 +14,8 @@ app.use(shopRoutes)
 
 // 404 page
 app.use((req, res, next) => {
+  // path => /home/praveen/Desktop/Backup-Win-/developer/WebD/Developer/NodeJS-Ud/
+  // (path.join(__dirname, "views", "404.html")) => /home/praveen/Desktop/Backup-Win-/developer/WebD/Developer/NodeJS-Ud/views/404.html
   res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
 });
 app.listen(4000, () => {
