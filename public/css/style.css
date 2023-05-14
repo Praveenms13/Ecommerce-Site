@@ -1,3 +1,112 @@
-a{
-    color: red;
+/* CSS for Node Shopping App */
+
+/* Set default styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Style the main section */
+main {
+    margin: 1rem;
+}
+
+/* Style the add product form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input[type="text"] {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    width: 100%;
+    max-width: 20rem;
+}
+
+form button[type="submit"] {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* CSS for Node Shopping App */
+
+/* Set default styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Style the main section */
+main {
+    margin: 1rem;
+}
+
+/* Style the product list */
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    margin: 1rem 0;
 }
