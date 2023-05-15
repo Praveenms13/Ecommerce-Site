@@ -20,6 +20,6 @@ app.use((req, res, next) => {
   // (path.join(__dirname, "views", "404.html")) => /home/praveen/Desktop/Backup-Win-/developer/WebD/Developer/NodeJS-Ud/views/404.html
   res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
 });
-app.listen(4000, () => {
-  console.log("Server is listening on port 4000");
+app.listen(3000, () => {
+  console.log("Server is listening on port 3000");
 });

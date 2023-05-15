@@ -2,25 +2,25 @@ doctype html
 html.no-js(lang='en')
   head
     meta(charset='UTF-8')
-    title #{pageTitle}
+    title
     meta(charset='utf-8')
     meta(http-equiv='x-ua-compatible', content='ie=edge')
     meta(name='description', content='An example pen showing how a basic CSS Grid container can create a nice, responsive card layout.')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    link(rel="stylesheet", href="/css/shop.css")
-    link(rel='stylesheet', href='/css/products.css')
+    link(rel="stylesheet", href="css/shop.css")
+    link(rel="stylesheet", href="css/products.css")
   body
+    style.
     header.main-header
-            nav.main-header__nav
-                ul
-                    li
-                        a(href="/") Shop
-                    li
-                        a(href="/admin/add-product") Add Product
-    main 
-        h1.mainMyProducts My Products
-        p.mainList List of all Products..
-
+      nav.main-header__nav
+        ul
+          li
+            a(href='/') Shop
+          li
+            a(href='/admin/add-product') Add Product
+    main
+      h1.mainMyProducts My Products
+      p.mainList List of all Products..
     .grid
       .grid__item
         .card
