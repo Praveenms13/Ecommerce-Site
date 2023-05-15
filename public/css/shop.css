@@ -11,6 +11,13 @@ html {
     font-size: 62.5%;
 }
 
+/* Set default styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 nav {
     background-color: #333;
     color: #fff;
@@ -43,6 +50,10 @@ nav {
 .navbar__item a:hover {
     background-color: #ddd;
     color: black;
+}
+.active {
+    background-color: #4CAF50;
+    color: white;
 }
 
 main {
@@ -84,7 +95,8 @@ main {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
-.NoProducts{
+
+.NoProducts {
     font-size: 40px;
     position: relative;
     margin-top: 200px;
