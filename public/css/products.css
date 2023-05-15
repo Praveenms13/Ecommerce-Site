@@ -1,39 +1,11 @@
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 6rem;
-    font-family: "Inter", sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
-    min-height: 100vh;
-}
-
-@media (max-width: 60em) {
-    body {
-        padding: 3rem;
-    }
-}
-
 .grid {
     display: grid;
     width: 114rem;
     grid-gap: 6rem;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     align-items: start;
+    margin-top: 150px;
+    /* border: 1px solid #ccc; */
 }
 
 @media (max-width: 60em) {

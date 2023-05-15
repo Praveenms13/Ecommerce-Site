@@ -1,44 +1,53 @@
- /* Header styles */
- .main-header {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     height: 6rem;
-     background-color: #333;
-     color: #fff;
- }
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 6rem;
+    font-family: "Inter", sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    min-height: 100vh;
+}
+
+@media (max-width: 60em) {
+    body {
+        padding: 3rem;
+    }
+}
 
 
- .main-header__nav ul {
-     list-style: none;
-     display: flex;
- }
+/* Main styles */
+.heading {
+    padding: 3rem 6rem;
+    position: absolute;
+    /* border: 2px solid #333; */
+}
 
- .main-header__nav li {
-     margin-left: 2rem;
- }
+.mainMyProducts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
 
- .main-header__nav a {
-     color: #fff;
-     text-decoration: none;
-     font-weight: bold;
-     font-size: 1.2rem;
- }
-
- /* Main styles */
- main {
-     max-width: 114rem;
-     margin: 0 auto;
-     padding: 3rem 6rem;
- }
-
- .mainMyProducts {
-     font-size: 3rem;
-     margin-bottom: 1.5rem;
- }
-
- .mainList {
-     font-size: 1.5rem;
-     color: #777;
-     margin-bottom: 2.5rem;
- }
+.mainList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
