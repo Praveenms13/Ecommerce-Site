@@ -1,0 +1,61 @@
+doctype html
+html.no-js(lang='en')
+  head
+    meta(charset='UTF-8')
+    title #{pageTitle}
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='description', content='An example pen showing how a basic CSS Grid container can create a nice, responsive card layout.')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel="stylesheet", href="/css/shop.css")
+    link(rel='stylesheet', href='/css/products.css')
+  body
+    header.main-header
+            nav.main-header__nav
+                ul
+                    li
+                        a(href="/") Shop
+                    li
+                        a(href="/admin/add-product") Add Product
+    main 
+        h1.mainMyProducts My Products
+        p.mainList List of all Products..
+
+    .grid
+      .grid__item
+        .card
+          img.card__img(src='https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80', alt='Snowy Mountains')
+          .card__content
+            h1.card__header A starry night
+            p.card__text
+              | Look up at the night sky, and find yourself 
+              strong immersed
+              |  in the amazing mountain range of Aspen.
+            button.card__btn
+              | Explore 
+              span &rarr;
+      .grid__item
+        .card
+          img.card__img(src='https://images.unsplash.com/photo-1485160497022-3e09382fb310?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80', alt='Desert')
+          .card__content
+            h1.card__header Misty mornings
+            p.card__text
+              | Capture the stunning 
+              strong essence
+              |  of the early morning sunrise in the Californian wilderness.
+            button.card__btn
+              | Explore 
+              span &rarr;
+      .grid__item
+        .card
+          img.card__img(src='https://images.unsplash.com/photo-1506318164473-2dfd3ede3623?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80', alt='Canyons')
+          .card__content
+            h1.card__header Utah sunsets
+            p.card__text
+              | Sunsets over the 
+              strong stunning
+              |  Utah Canyonlands, is truly something much more than incredible.
+            button.card__btn
+              | Explore 
+              span &rarr;
+    // partial

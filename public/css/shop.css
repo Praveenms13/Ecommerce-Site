@@ -1,12 +1,6 @@
 /* CSS for Node Shopping App */
 
 /* Set default styles for the body */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 /* Style the header */
 header {
     background-color: #333;
@@ -38,10 +32,10 @@ main {
 }
 
 /* Style the product list */
-h1 {
+h1 .mainMyProducts{
     font-size: 2rem;
 }
 
-p {
+p .mainList{
     margin: 1rem 0;
 }
