@@ -1,0 +1,25 @@
+/* Style the add product form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input[type="text"] {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    width: 100%;
+    max-width: 20rem;
+}
+
+form button[type="submit"] {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}

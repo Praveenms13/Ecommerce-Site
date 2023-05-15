@@ -1,22 +1,10 @@
-doctype html
-html.no-js(lang="en")
-  head
-    meta(charset="UTF-8")
-    title #{pageTitle}
-    meta(charset="utf-8")
-    meta(http-equiv="x-ua-compatible", content="ie=edge")
-    meta(name="description", content="An example pen showing how a basic CSS Grid container can create a nice, responsive card layout.")
-    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
-    link(rel="stylesheet", href="css/shop.css")
-    link(rel="stylesheet", href="css/products.css")
-  body
-    nav
-      ul.navbar
-        li.navbar__item
-          a.active(href="/") Shop
-        li.navbar__item
-          a(href="/admin/add-product") Add Product
-    main
+extends layouts/main-layout.pug 
+
+block styles
+  link(rel="stylesheet", href="css/products.css")
+
+block contentBody 
+  main
       div.heading
         h1.mainMyProducts My Products
         p.mainList List of all Products..

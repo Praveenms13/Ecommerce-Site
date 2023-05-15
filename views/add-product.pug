@@ -1,20 +1,11 @@
-doctype html
-html(lang='en')
-  head
-    meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title #{pageTitle}
-    link(rel="stylesheet", href="/css/shop.css")
-    link(rel='stylesheet', href='/css/add-product.css')
-  body
-    nav
-      ul.navbar
-        li.navbar__item
-          a(href="/") Shop
-        li.navbar__item
-          a.active(href="/admin/add-product") Add Product
-    main.FORM
+extends layouts/main-layout.pug 
+
+block styles
+  link(rel='stylesheet', href='/css/add-product.css')
+  link(rel='stylesheet', href='/css/add-product-form.css')
+
+block contentBody 
+  main.FORM
       form.tag(action='/admin/add-product', method='POST')
         input.productInput(type='text', name='title')#title
         button.productInputButton(type='submit') Add Product
