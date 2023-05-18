@@ -5,10 +5,10 @@ block styles
 
 block contentBody 
   main
-      div.heading
-        h1.mainMyProducts My Products
-        p.mainList List of all Products..
       if prods.length > 0
+        div.heading
+          h1.mainMyProducts My Products
+          p.mainList List of all Products..
         div.grid
           each product in prods 
             div.grid__item

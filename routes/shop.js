@@ -6,9 +6,10 @@ const adminDatas = require("./admin");
 
 router.get('/', (req, res, next) => {
     console.log('shop.js: ', adminDatas.products);
-   // res.sendFile(path.join(rootDir, 'views', 'shop.html'));
-   const products = adminDatas.products;    
-   res.render('shop', {prods: products, pageTitle: 'Shop', path: "/"});
+    // res.sendFile(path.join(rootDir, 'views', 'shop.html'));
+    const products = adminDatas.products;
+    res.render('shop', { prods: products, pageTitle: 'Shop', path: "/", hasProducts: products.length > 0 });
+    // hasProducts is for hdb template.........
 });
 
 module.exports = router;
