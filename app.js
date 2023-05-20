@@ -8,7 +8,7 @@ app.engine('hbs', engine({
   defaultLayout: "main-layout",
   layoutsDir: "views/layouts/"
 }));// Handlebars is the big templatev so we shld tell to express that we are using handlebars as the templating engine 
-app.set('view engine', 'hbs');
+app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 const adminDatas = require("./routes/admin");
