@@ -5,7 +5,8 @@ const bodyParser = require("body-parser");
 const { engine } = require('express-handlebars')
 app.engine('hbs', engine({
   extname: '.hbs',
-  defaultLayout: false,
+  defaultLayout: "main-layout",
+  layoutsDir: "views/layouts/"
 }));// Handlebars is the big templatev so we shld tell to express that we are using handlebars as the templating engine 
 app.set('view engine', 'hbs');
 app.set('views', 'views');

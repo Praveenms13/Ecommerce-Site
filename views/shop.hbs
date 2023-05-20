@@ -1,31 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{{pageTitle}}</title>
-    <link rel="stylesheet" href="/css/shop.css" />
-    <link rel="stylesheet" href="/css/products.css" />
-  </head>
-  <body>
-    <nav>
-      <ul class="navbar">
-        <li class="navbar__item"><a class="active" href="/">Shop</a></li>
-        <li class="navbar__item"><a href="/admin/add-product">Add Product</a></li>
-      </ul>
-    </nav>
-    <p>from HBS</p>
-    <main>
-      {{#if hasProducts}}
-      <div class="heading">
-        <h1 class="mainMyProducts">My Products</h1>
-        <p class="mainList">List of all Products..</p>
-      </div>
-      <div class="grid">
-        {{#each prods}}
+<p>from HBS</p>
+<main>
+  {{#if hasProducts}}
+    <div class="heading">
+      <h1 class="mainMyProducts">My Products</h1>
+      <p class="mainList">List of all Products..</p>
+    </div>
+    <div class="grid">
+      {{#each prods}}
         <div class="grid__item">
           <div class="card">
-            <img class="card__img" src="https://cdn.shopify.com/s/files/1/0590/3830/2344/products/rich_dad_poor_dad_by_robert_t__1607410877_44fb96ac-768x1024.jpg?v=1659004008&amp;width=1445" alt="Rich dad poor dad" />
+            <img
+              class="card__img"
+              src="https://cdn.shopify.com/s/files/1/0590/3830/2344/products/rich_dad_poor_dad_by_robert_t__1607410877_44fb96ac-768x1024.jpg?v=1659004008&amp;width=1445"
+              alt="Rich dad poor dad"
+            />
             <div class="card__content">
-              <h1 class="card__header">{{ this.title }}</h1>
+              <h1 class="card__header">{{this.title}}</h1>
               <p class="card__text">
                 <strong>Price: $10</strong>
               </p>
@@ -33,13 +23,11 @@
             </div>
           </div>
         </div>
-        {{/each}}
-      </div>
-      {{ else }}
-      <div class="heading">
-        <h1 class="NoProducts">No Products are listed</h1>
-      </div>
-      {{/if}}
-    </main>
-  </body>
-</html>
+      {{/each}}
+    </div>
+  {{else}}
+    <div class="heading">
+      <h1 class="NoProducts">No Products are listed</h1>
+    </div>
+  {{/if}}
+</main>
