@@ -4,14 +4,13 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-}
+} 
 
 html {
     box-sizing: border-box;
     font-size: 62.5%;
 }
 
-/* Set default styles for the body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -21,7 +20,6 @@ body {
 nav {
     background-color: #333;
     color: #fff;
-    /* Add this line to center the content */
 }
 
 .navbar {
@@ -30,12 +28,10 @@ nav {
     padding: 0;
     overflow: hidden;
     text-align: center;
-    /* Add this line to center the content */
 }
 
 .navbar__item {
     display: inline-block;
-    /* Change float to display and set to inline-block */
 }
 
 .navbar__item a {
@@ -74,10 +70,8 @@ main {
 }
 
 
-/* Main styles */
 .heading {
     position: absolute;
-    /* border: 2px solid #333; */
 }
 
 .mainMyProducts {

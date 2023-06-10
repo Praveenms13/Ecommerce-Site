@@ -3,15 +3,6 @@ const express = require("express");
 const errorController = require("./controllers/404.js");
 const app = express();
 const bodyParser = require("body-parser");
-const { engine } = require("express-handlebars");
-app.engine(
-  "hbs",
-  engine({
-    extname: ".hbs",
-    defaultLayout: "main-layout",
-    layoutsDir: "views/layouts/",
-  })
-); // Handlebars is the big templatev so we shld tell to express that we are using handlebars as the templating engine
 app.set("view engine", "ejs");
 app.set("views", "views");
 
