@@ -1,10 +1,10 @@
-<%- include('includes/head.ejs') %>
+<%- include('../includes/head.ejs') %>
         <link rel="stylesheet" href="/css/add-product.css" />
         <link rel="stylesheet" href="/css/add-product-form.css" />
     </head>
 
     <body>
-        <%- include('includes/navigation.ejs') %></body>
+        <%- include('../includes/navigation.ejs') %></body>
         <main class="FORM">
             <form class="tag" action="/admin/add-product" method="POST">
                 <input class="productInput" type="text" name="title" id="title" />
@@ -13,4 +13,4 @@
                 <p>by EJS File</p>
             </form>
         </main>
-<%- include('includes/end.ejs') %>
+<%- include('../includes/end.ejs') %>

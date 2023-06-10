@@ -27,9 +27,9 @@ app.use(shopRoutes);
  */
 app.use(errorController.get404);
 
-
-app.listen(4000, () => {
-  console.log("Server is listening on port 4000");
+port = 5000
+app.listen(port, () => {
+  console.log("Server is listening on port",port);
 });
 /**
  * Types Of Templating Engines and their npm packages
