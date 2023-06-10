@@ -1,38 +1,60 @@
-<nav>
-  <ul class="navbar">
-    <li class="navbar__item">
-      <a class="<%= path === '/' ? 'active' : ''%>" href="/">
-        Shop
+<div class="container">
+  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <div class="col-md-3 mb-2 mb-md-0">
+      <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+      <img width="50" height="50" src="https://img.icons8.com/nolan/64/online-shop-sale.png" alt="ecommerce-logo"/>
       </a>
-    </li>
-    <li class="navbar__item">
-      <a
-        class="<%= path === '/products' ? 'active' : ''%>"
-        href="/products"
-      >
-        products
-      </a>
-    </li>
-    <li class="navbar__item">
-      <a class="<%= path === '/cart' ? 'active' : ''%>" href="/cart">
-        Cart
-      </a>
-    </li>
-    <li class="navbar__item">
-      <a
-        class="<%= path === '/admin/add-product' ? 'active' : ''%>"
-        href="/admin/add-product"
-      >
-        Add Product
-      </a>
-    </li>
-    <li class="navbar__item">
-      <a
-        class="<%= path === '/admin/products' ? 'active' : ''%>"
-        href="/admin/products"
-      >
-        Add Products
-      </a>
-    </li>
-  </ul>
-</nav>;
+    </div>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li class="navbar__item">
+        <a
+          class="nav-link px-2 <%= path === '/' ? 'link-secondary' : ''%>"
+          href="/"
+        >
+          Shop
+        </a>
+      </li>
+      <li class="navbar__item">
+        <a
+          class="nav-link px-2 <%= path === '/products' ? 'link-secondary' : ''%>"
+          href="/products"
+        >
+          products
+        </a>
+      </li>
+      <li class="navbar__item">
+        <a
+          class="nav-link px-2 <%= path === '/cart' ? 'link-secondary' : ''%>"
+          href="/cart"
+        >
+          Cart
+        </a>
+      </li>
+      <li class="navbar__item">
+        <a
+          class="nav-link px-2 <%= path === '/admin/add-product' ? 'link-secondary' : ''%>"
+          href="/admin/add-product"
+        >
+          Add Product
+        </a>
+      </li>
+      <li class="navbar__item">
+        <a
+          class="nav-link px-2 <%= path === '/admin/products' ? 'link-secondary' : ''%>"
+          href="/admin/products"
+        >
+          Add Products
+        </a>
+      </li>
+    </ul>
+
+    <div class="col-md-3 text-end">
+      <button type="button" class="btn btn-outline-primary me-2">
+        Login
+      </button>
+      <button type="button" class="btn btn-primary">
+        Sign-up
+      </button>
+    </div>
+  </header>

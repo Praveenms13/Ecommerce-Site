@@ -1,29 +1,38 @@
 <%- include('../includes/head.ejs') %>
-<link rel="stylesheet" href="/css/add-product.css" />
-<link rel="stylesheet" href="/css/add-product-form.css" />
 </head>
 
 <body>
-    <%- include('../includes/navigation.ejs') %></body>
+    <%- include('../includes/navigation.ejs') %>
     <main class="FORM">
         <form class="tag" action="/admin/add-product" method="POST">
-            <div class="form-control">
-                <label for = "title">Title</label>
-                <input type="text" name="title" id="title"/>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Enter Title here:</span>
+                <input type="text" name="title" id="title" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default">
             </div>
-            <div class="form-control">
-                <label for = "imageUrl">Image Url</label>
-                <input type="text" name="imageUrl" id="imageUrl"/>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Enter Image Url here:</span>
+                <input type="text" name="imageUrl" id="imageUrl" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default">
             </div>
-            <div class="form-control">
-                <label for = "price">Price</label>
-                <input type="number" name="price" id="price"/>
+            <h3>or</h3>
+            <div class="input-group mb-3">
+                <input type="file" name="imageUrl" id="imageUrl" class="form-control" id="inputGroupFile02">
+                <label class="input-group-text" for="inputGroupFile02">Upload here</label>
             </div>
-            <div class="form-control">
-                <label for = "description">Description</label>
-                <textarea name="description" id="description" rows="5"></textarea>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Enter Price Here:</span>
+                <input type="number" name="price" id="price" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group">
+                <span class="input-group-text">With textarea</span>
+                <textarea name="description" id="description" rows="5" class="form-control"
+                    aria-label="With textarea"></textarea>
             </div>
             <button class="productInputButton" type="submit">Add Product</button>
         </form>
     </main>
+</body>
+
 <%- include('../includes/end.ejs') %>
