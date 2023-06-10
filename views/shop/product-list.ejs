@@ -24,14 +24,17 @@
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <img class="card-img-top"
-                            src="https://cdn.shopify.com/s/files/1/0590/3830/2344/products/rich_dad_poor_dad_by_robert_t__1607410877_44fb96ac-768x1024.jpg?v=1659004008&amp;width=1445"
-                            alt="Rich dad poor dad" />
+                            src="<%= product.imageUrl %>"
+                            alt="<%= product.title %>" />
                         <div class="card-body">
                             <h5 class="card-title"><%= product.title %></h5>
                             <p class="card-text">
-                                <strong>Price: $10</strong>
+                                <strong>Rs. <%= product.price%></strong><br>
+                                <strong><%= product.description%></strong>
                             </p>
-                            <button class="btn btn-primary">Add to cart<span>&rarr;</span></button>
+                            <form action='/add-to-cart' method='POST'>
+                                <button class="btn btn-primary">Add to cart<span>&rarr;</span></button>
+                            </form>
                         </div>
                     </div>
                 </div>

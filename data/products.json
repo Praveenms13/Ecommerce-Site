@@ -1,1 +1,23 @@
-[{"title":"Potato","imageUrl":["https://images.unsplash.com/photo-1579353977828-2a4eab540b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2FtcGxlfGVufDB8fDB8fHww&w=1000&q=80",""],"description":"1000","price":"potatoes are good for health"},{"title":"tomato","imageUrl":["ajsbjs",""],"description":"12000","price":"tomato stones\r\n"},{"title":"halt","imageUrl":["ndsf nd,z ",""],"description":"200","price":";fck;nf\r\n"}]
+[
+    {
+        "title": "Tomato",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Tomato_je.jpg",
+        "description": "Fresh Tomatoes available here ",
+        "price": "1500"
+    },
+    {
+        "title": "Potatoes",
+        "imageUrl": [
+            "https://image.cnbcfm.com/api/v1/image/107221310-1680726626389-gettyimages-1127822298-coloursurge_stand_out_39.jpeg?v=1680876001&w=1920&h=1080",
+            ""
+        ],
+        "description": "fresh potatoes good for heart",
+        "price": "600"
+    },
+    {
+        "title": "Carrot",
+        "imageUrl": "https://blog-images-1.pharmeasy.in/blog/production/wp-content/uploads/2021/04/23175719/shutterstock_440493100-1.jpg",
+        "description": "Good for facial, prevents facial acnes\r\n",
+        "price": "300"
+    }
+]

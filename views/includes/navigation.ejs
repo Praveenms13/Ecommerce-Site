@@ -33,6 +33,14 @@
       </li>
       <li class="navbar__item">
         <a
+          class="nav-link px-2 <%= path === '/orders' ? 'link-secondary' : ''%>"
+          href="/orders"
+        >
+          Orders
+        </a>
+      </li>
+      <li class="navbar__item">
+        <a
           class="nav-link px-2 <%= path === '/admin/add-product' ? 'link-secondary' : ''%>"
           href="/admin/add-product"
         >
@@ -44,7 +52,7 @@
           class="nav-link px-2 <%= path === '/admin/products' ? 'link-secondary' : ''%>"
           href="/admin/products"
         >
-          Add Products
+          Admin Products
         </a>
       </li>
     </ul>
