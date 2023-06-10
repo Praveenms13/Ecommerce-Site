@@ -1,40 +1,50 @@
 <%- include('../includes/head.ejs') %>
-        <link rel="stylesheet" href="/css/products.css" />
-    </head>
+<link rel="stylesheet" href="/css/products.css" />
+</head>
 
-    <body>
-        <%- include('../includes/navigation.ejs') %>
-        <p>from ejs</p>
-        <main>
-            <% if (prods.length > 0) { %>
-                <div class="heading">
-                    <h1 class="mainMyProducts">My Products</h1>
-                    <p class="mainList">List of all Products..</p>
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    <main>
+        <% if (prods.length > 0) { %>
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <h1 class="mainMyProducts">My Products</h1>
+            </div>
+        </div>
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-auto">
+                    <p>List of all Products..</p>
                 </div>
-                <div class="grid">
-                    <% for(let product of prods){ %>
-                        <div class="grid__item">
-                            <div class="card">
-                                <img
-                                    class="card__img"
-                                    src="https://cdn.shopify.com/s/files/1/0590/3830/2344/products/rich_dad_poor_dad_by_robert_t__1607410877_44fb96ac-768x1024.jpg?v=1659004008&amp;width=1445"
-                                    alt="Rich dad poor dad"
-                                />
-                                <div class="card__content">
-                                    <h1 class="card__header"><%= product.title %></h1>
-                                    <p class="card__text">
-                                        <strong>Price: $10</strong>
-                                    </p>
-                                    <button class="card__btn">Add to cart<span>&rarr;</span></button>
-                                </div>
-                            </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <% for(let product of prods){ %>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img class="card-img-top"
+                            src="https://cdn.shopify.com/s/files/1/0590/3830/2344/products/rich_dad_poor_dad_by_robert_t__1607410877_44fb96ac-768x1024.jpg?v=1659004008&amp;width=1445"
+                            alt="Rich dad poor dad" />
+                        <div class="card-body">
+                            <h5 class="card-title"><%= product.title %></h5>
+                            <p class="card-text">
+                                <strong>Price: $10</strong>
+                            </p>
+                            <button class="btn btn-primary">Add to cart<span>&rarr;</span></button>
                         </div>
-                    <% } %>
+                    </div>
                 </div>
-            <% } else { %>
-                <div class="heading">
-                    <h1 class="mainMyProducts">No Products are listed....</h1>
-                </div>
-            <% } %>
-        </main>
-        <%- include('../includes/end.ejs') %></body>
+                <% } %>
+            </div>
+        </div>
+        <% } else { %>
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <h1 class="mainMyProducts">No Products are listed here</h1>
+            </div>
+        </div>
+        <% } %>
+    </main>
+    <%- include('../includes/end.ejs') %>
+</body>
