@@ -5,49 +5,44 @@
 <body>
     <%- include('../includes/navigation.ejs') %>
     <main>
-        <% if (prods.length > 0) { %>
-        <div class="row justify-content-center">
-            <div class="col-md-auto">
-                <h1 class="mainMyProducts">My Products</h1>
-            </div>
+    <% if (prods.length > 0) { %>
+    <div class="row justify-content-center">
+        <div class="col-md-auto text-center">
+            <h1 class="mainMyProducts">List of all Products</h1>
         </div>
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-md-auto">
-                    <p>List of all Products..</p>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <% for(let product of prods){ %>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img class="card-img-top"
-                            src="<%= product.imageUrl %>"
-                            alt="<%= product.title %>" />
-                        <div class="card-body">
-                            <h5 class="card-title"><%= product.title %></h5>
-                            <p class="card-text">
-                                <strong>Rs. <%= product.price%></strong><br>
-                                <strong><%= product.description%></strong>
-                            </p>
-                            <form action='/add-to-cart' method='POST'>
-                                <button class="btn btn-primary">Add to cart<span>&rarr;</span></button>
-                            </form>
-                        </div>
+    </div>
+    <br><br></br>
+    <div class="container">
+        <div class="row">
+            <% for(let product of prods){ %>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top"
+                        src="<%= product.imageUrl %>"
+                        alt="<%= product.name %>" />
+                    <div class="card-body">
+                        <h5 class="card-title mb-2"><%= product.prodname %></h5>
+                        <p class="card-text mb-2">
+                            <strong>Rs. <%= product.price %> for <%= product.quantity %></strong><br>
+                            <small><%= product.description %></small>
+                        </p>
+                        <form action='/add-to-cart' method='POST'>
+                            <button class="btn btn-primary btn-block mt-2">Add to cart <span>&rarr;</span></button>
+                        </form>
                     </div>
                 </div>
-                <% } %>
             </div>
+            <% } %>
         </div>
-        <% } else { %>
-        <div class="row justify-content-center">
-            <div class="col-md-auto">
-                <h1 class="mainMyProducts">No Products are listed here</h1>
-            </div>
+    </div>
+    <% } else { %>
+    <div class="row justify-content-center">
+        <div class="col-md-auto text-center">
+            <h1 class="mainMyProducts">No Products are listed here</h1>
         </div>
-        <% } %>
-    </main>
+    </div>
+    <% } %>
+</main>
+
     <%- include('../includes/end.ejs') %>
 </body>
