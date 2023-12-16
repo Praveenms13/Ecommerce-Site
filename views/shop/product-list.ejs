@@ -28,9 +28,7 @@
                         </p>
                         <div class="d-flex gap-2 align-items-start">
                             <a href="products/<%= product.id %>" class="btn btn-primary">Details &nbsp;&#9432;</a>
-                            <form action='/add-to-cart' method='POST'>
-                                <button type="submit" class="btn btn-primary">Add to cart &nbsp;<span>&rarr;</span></button>
-                            </form>
+                            <%- include('../includes/add-to-cart.ejs', {product: product}) %>
                         </div>
                     </div>
                 </div>
