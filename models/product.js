@@ -25,7 +25,8 @@ const getProductsFromFile = (cb) => {
 };
 
 module.exports = class Product {
-  constructor(title, imageUrl, price, description, discount, prodname, quantity) {
+  constructor(id, title, imageUrl, price, description, discount, prodname, quantity) {
+    this.id = id;
     this.title = title;
     this.prodname = prodname;
     this.imageUrl = imageUrl;
@@ -37,12 +38,23 @@ module.exports = class Product {
   // By using arrow function we can use this keyword inside the function
   // This will not work if we use normal function
   save() {
-    this.id = Math.random().toString();
     getProductsFromFile((products) => {
-      products.push(this);
-      fs.writeFile(p, JSON.stringify(products), (err) => {
-        console.log(err);
-      });
+      if (this.id) {
+        const existingProductIndex = products.findIndex(
+          (prod) => prod.id === this.id
+        );
+        const updatedProducts = [...products];
+        updatedProducts[existingProductIndex] = this;
+        fs.writeFile(p, JSON.stringify(updatedProducts), (err) => {
+          console.log(err);
+        });
+      } else {
+        this.id = Math.random().toString();
+        products.push(this);
+        fs.writeFile(p, JSON.stringify(products), (err) => {
+          console.log(err);
+        });
+      }
     });
   }
 

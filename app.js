@@ -18,7 +18,7 @@ app.use(shopRoutes);
  */
 app.use(errorController.get404);
 
-port = 20000
+port = 2000
 app.listen(port, () => {
   console.log("Server is listening on port",port);
 });
